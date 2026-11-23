@@ -1,0 +1,12 @@
+; Basys 3 - PicoBlaze KCPSM6
+; SW[7:0] -> LED[7:0]
+
+CONSTANT SW_PORT,  00
+CONSTANT LED_PORT, 01
+
+ADDRESS 000
+
+main:
+    INPUT  s0, SW_PORT
+    OUTPUT s0, LED_PORT
+    JUMP   main

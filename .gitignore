@@ -1,0 +1,11 @@
+vivado/
+sim_work/
+.Xil/
+*.jou
+*.log
+*.dcp
+*.wdb
+*.pb
+__pycache__/
+software/*.fmt
+tools/KCPSM6_session_log.txt

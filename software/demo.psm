@@ -1,0 +1,56 @@
+; Basys 3: exact switch-to-LED mirror, four hexadecimal digits, UART echo.
+; Decimal points show C,R,L,D|U. All five buttons are readable at port 02.
+; Hold U+D together to reset. UART 115200 8N1, no flow control.
+ADDRESS 000
+main:
+        INPUT s0, 00
+        INPUT s1, 01
+        INPUT s2, 02
+        OUTPUT s0, 10
+        OUTPUT s1, 11
+
+        LOAD s3, s0
+        AND s3, 0F
+        TEST s2, 01
+        JUMP Z, digit0
+        OR s3, 80
+digit0: OUTPUT s3, 20
+
+        LOAD s3, s0
+        SR0 s3
+        SR0 s3
+        SR0 s3
+        SR0 s3
+        TEST s2, 02
+        JUMP Z, digit1
+        OR s3, 80
+digit1: OUTPUT s3, 21
+
+        LOAD s3, s1
+        AND s3, 0F
+        TEST s2, 04
+        JUMP Z, digit2
+        OR s3, 80
+digit2: OUTPUT s3, 22
+
+        LOAD s3, s1
+        SR0 s3
+        SR0 s3
+        SR0 s3
+        SR0 s3
+        TEST s2, 18
+        JUMP Z, digit3
+        OR s3, 80
+digit3: OUTPUT s3, 23
+
+        ; Consume only when TX is ready, so display scanning never stalls.
+        INPUT s4, 31
+        AND s4, 03
+        COMPARE s4, 03
+        JUMP NZ, main
+        INPUT s5, 30
+        OUTPUT s5, 30
+        JUMP main
+
+ADDRESS 3FF
+        RETURNI DISABLE

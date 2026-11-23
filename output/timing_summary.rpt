@@ -1,0 +1,607 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Mon Nov 23 09:34:34 2026
+| Host         : onigas-PC64 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -file H:/chatGPT/Picoblaze/Basys3_KCPSM6/output/timing_summary.rpt
+| Design       : picoblaze_basys3
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+----------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (22)
+6. checking no_output_delay (29)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (22)
+-------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 22 input ports with no input delay but user has a false path constraint. (MEDIUM)
+
+
+6. checking no_output_delay (29)
+--------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 29 ports with no output delay but user has a false path constraint (MEDIUM)
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.640        0.000                      0                 1052        0.115        0.000                      0                 1052        3.750        0.000                       0                   442  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+jtag_drck    {0.000 5.000}      10.000          100.000         
+jtag_update  {0.000 5.000}      10.000          100.000         
+sys_clk      {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+jtag_drck           7.316        0.000                      0                   47        0.191        0.000                      0                   47        4.500        0.000                       0                    32  
+jtag_update         8.422        0.000                      0                    2        0.393        0.000                      0                    2        4.500        0.000                       0                     6  
+sys_clk             0.640        0.000                      0                 1003        0.115        0.000                      0                 1003        3.750        0.000                       0                   404  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  jtag_drck
+  To Clock:  jtag_drck
+
+Setup :            0  Failing Endpoints,  Worst Slack        7.316ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.191ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             7.316ns  (required time - arrival time)
+  Source:                 program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.bram_ce_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by jtag_drck  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.jtag_din_int_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by jtag_drck  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             jtag_drck
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (jtag_drck rise@10.000ns - jtag_drck rise@0.000ns)
+  Data Path Delay:        2.643ns  (logic 0.999ns (37.799%)  route 1.644ns (62.201%))
+  Logic Levels:           2  (LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.890ns = ( 12.890 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.239ns
+    Clock Pessimism Removal (CPR):    0.314ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock jtag_drck rise edge)
+                                                      0.000     0.000 r  
+    BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_7SERIES_gen.BSCAN_BLOCK_inst/DRCK
+                         net (fo=1, routed)           1.593     1.593    program_memory/instantiate_loader.jtag_loader_6_inst/drck
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     1.689 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.upload_clock/O
+                         net (fo=31, routed)          1.549     3.239    program_memory/instantiate_loader.jtag_loader_6_inst/shift_clk
+    SLICE_X46Y26         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.bram_ce_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y26         FDRE (Prop_fdre_C_Q)         0.518     3.757 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.bram_ce_reg[0]/Q
+                         net (fo=21, routed)          1.018     4.774    program_memory/instantiate_loader.jtag_loader_6_inst/bram_ce
+    SLICE_X49Y26         LUT2 (Prop_lut2_I1_O)        0.154     4.928 r  program_memory/instantiate_loader.jtag_loader_6_inst/ram_1k_generate.akv7.kcpsm6_rom_i_1/O
+                         net (fo=2, routed)           0.626     5.554    program_memory/instantiate_loader.jtag_loader_6_inst/enable_b
+    SLICE_X49Y24         LUT6 (Prop_lut6_I0_O)        0.327     5.881 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.jtag_din_int[0]_i_1/O
+                         net (fo=1, routed)           0.000     5.881    program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.jtag_din_int[0]_i_1_n_0
+    SLICE_X49Y24         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.jtag_din_int_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock jtag_drck rise edge)
+                                                     10.000    10.000 r  
+    BSCAN_X0Y1           BSCANE2                      0.000    10.000 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_7SERIES_gen.BSCAN_BLOCK_inst/DRCK
+                         net (fo=1, routed)           1.364    11.364    program_memory/instantiate_loader.jtag_loader_6_inst/drck
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    11.455 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.upload_clock/O
+                         net (fo=31, routed)          1.434    12.890    program_memory/instantiate_loader.jtag_loader_6_inst/shift_clk
+    SLICE_X49Y24         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.jtag_din_int_reg[0]/C
+                         clock pessimism              0.314    13.204    
+                         clock uncertainty           -0.035    13.168    
+    SLICE_X49Y24         FDRE (Setup_fdre_C_D)        0.029    13.197    program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.jtag_din_int_reg[0]
+  -------------------------------------------------------------------
+                         required time                         13.197    
+                         arrival time                          -5.881    
+  -------------------------------------------------------------------
+                         slack                                  7.316    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.191ns  (arrival time - required time)
+  Source:                 program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.loop2[11].jtag_din_int_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by jtag_drck  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.loop2[12].jtag_din_int_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by jtag_drck  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             jtag_drck
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (jtag_drck rise@0.000ns - jtag_drck rise@0.000ns)
+  Data Path Delay:        0.295ns  (logic 0.186ns (63.050%)  route 0.109ns (36.950%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.544ns
+    Source Clock Delay      (SCD):    1.174ns
+    Clock Pessimism Removal (CPR):    0.357ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock jtag_drck rise edge)
+                                                      0.000     0.000 r  
+    BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_7SERIES_gen.BSCAN_BLOCK_inst/DRCK
+                         net (fo=1, routed)           0.594     0.594    program_memory/instantiate_loader.jtag_loader_6_inst/drck
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.620 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.upload_clock/O
+                         net (fo=31, routed)          0.554     1.174    program_memory/instantiate_loader.jtag_loader_6_inst/shift_clk
+    SLICE_X49Y26         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.loop2[11].jtag_din_int_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y26         FDRE (Prop_fdre_C_Q)         0.141     1.315 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.loop2[11].jtag_din_int_reg[12]/Q
+                         net (fo=2, routed)           0.109     1.424    program_memory/instantiate_loader.jtag_loader_6_inst/data_in_b[12]
+    SLICE_X48Y26         LUT6 (Prop_lut6_I0_O)        0.045     1.469 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.loop2[12].jtag_din_int[13]_i_1/O
+                         net (fo=1, routed)           0.000     1.469    program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.loop2[12].jtag_din_int[13]_i_1_n_0
+    SLICE_X48Y26         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.loop2[12].jtag_din_int_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock jtag_drck rise edge)
+                                                      0.000     0.000 r  
+    BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_7SERIES_gen.BSCAN_BLOCK_inst/DRCK
+                         net (fo=1, routed)           0.694     0.694    program_memory/instantiate_loader.jtag_loader_6_inst/drck
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.723 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.upload_clock/O
+                         net (fo=31, routed)          0.821     1.544    program_memory/instantiate_loader.jtag_loader_6_inst/shift_clk
+    SLICE_X48Y26         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.loop2[12].jtag_din_int_reg[13]/C
+                         clock pessimism             -0.357     1.187    
+    SLICE_X48Y26         FDRE (Hold_fdre_C_D)         0.091     1.278    program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.loop2[12].jtag_din_int_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -1.278    
+                         arrival time                           1.469    
+  -------------------------------------------------------------------
+                         slack                                  0.191    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         jtag_drck
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_7SERIES_gen.BSCAN_BLOCK_inst/DRCK }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y1  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.upload_clock/I
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X46Y26   program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.bram_ce_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X46Y26   program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.bram_ce_reg[0]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  jtag_update
+  To Clock:  jtag_update
+
+Setup :            0  Failing Endpoints,  Worst Slack        8.422ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.393ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             8.422ns  (required time - arrival time)
+  Source:                 program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by jtag_update  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by jtag_update  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             jtag_update
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (jtag_update rise@10.000ns - jtag_update rise@0.000ns)
+  Data Path Delay:        1.639ns  (logic 0.606ns (36.972%)  route 1.033ns (63.028%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.287ns = ( 11.287 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.495ns
+    Clock Pessimism Removal (CPR):    0.186ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock jtag_update rise edge)
+                                                      0.000     0.000 r  
+    BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_7SERIES_gen.BSCAN_BLOCK_inst/UPDATE
+                         net (fo=6, routed)           1.495     1.495    program_memory/instantiate_loader.jtag_loader_6_inst/CLK
+    SLICE_X51Y26         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y26         FDRE (Prop_fdre_C_Q)         0.456     1.951 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int_reg[0]/Q
+                         net (fo=4, routed)           1.033     2.984    program_memory/instantiate_loader.jtag_loader_6_inst/AS[0]
+    SLICE_X50Y26         LUT5 (Prop_lut5_I4_O)        0.150     3.134 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int[7]_i_2/O
+                         net (fo=1, routed)           0.000     3.134    program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int[7]_i_2_n_0
+    SLICE_X50Y26         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock jtag_update rise edge)
+                                                     10.000    10.000 r  
+    BSCAN_X0Y1           BSCANE2                      0.000    10.000 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_7SERIES_gen.BSCAN_BLOCK_inst/UPDATE
+                         net (fo=6, routed)           1.287    11.287    program_memory/instantiate_loader.jtag_loader_6_inst/CLK
+    SLICE_X50Y26         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int_reg[7]/C
+                         clock pessimism              0.186    11.473    
+                         clock uncertainty           -0.035    11.438    
+    SLICE_X50Y26         FDRE (Setup_fdre_C_D)        0.118    11.556    program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int_reg[7]
+  -------------------------------------------------------------------
+                         required time                         11.556    
+                         arrival time                          -3.134    
+  -------------------------------------------------------------------
+                         slack                                  8.422    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.393ns  (arrival time - required time)
+  Source:                 program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by jtag_update  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by jtag_update  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             jtag_update
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (jtag_update rise@0.000ns - jtag_update rise@0.000ns)
+  Data Path Delay:        0.484ns  (logic 0.186ns (38.463%)  route 0.298ns (61.537%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.750ns
+    Source Clock Delay      (SCD):    0.658ns
+    Clock Pessimism Removal (CPR):    0.092ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock jtag_update rise edge)
+                                                      0.000     0.000 r  
+    BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_7SERIES_gen.BSCAN_BLOCK_inst/UPDATE
+                         net (fo=6, routed)           0.658     0.658    program_memory/instantiate_loader.jtag_loader_6_inst/CLK
+    SLICE_X51Y26         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y26         FDRE (Prop_fdre_C_Q)         0.141     0.799 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int_reg[0]/Q
+                         net (fo=4, routed)           0.298     1.097    program_memory/instantiate_loader.jtag_loader_6_inst/AS[0]
+    SLICE_X51Y26         LUT5 (Prop_lut5_I4_O)        0.045     1.142 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.142    program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int[0]_i_1_n_0
+    SLICE_X51Y26         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock jtag_update rise edge)
+                                                      0.000     0.000 r  
+    BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_7SERIES_gen.BSCAN_BLOCK_inst/UPDATE
+                         net (fo=6, routed)           0.750     0.750    program_memory/instantiate_loader.jtag_loader_6_inst/CLK
+    SLICE_X51Y26         FDRE                                         r  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int_reg[0]/C
+                         clock pessimism             -0.092     0.658    
+    SLICE_X51Y26         FDRE (Hold_fdre_C_D)         0.091     0.749    program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.picoblaze_reset_int_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.749    
+                         arrival time                           1.142    
+  -------------------------------------------------------------------
+                         slack                                  0.393    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         jtag_update
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_7SERIES_gen.BSCAN_BLOCK_inst/UPDATE }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB18_X1Y10  program_memory/ram_1k_generate.akv7.kcpsm6_rom/CLKBWRCLK
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y26  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X50Y26  program_memory/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int_reg[0]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk
+  To Clock:  sys_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.640ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.115ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.640ns  (required time - arrival time)
+  Source:                 program_memory/ram_1k_generate.akv7.kcpsm6_rom/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart/tx_count_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        8.617ns  (logic 3.778ns (43.844%)  route 4.839ns (56.156%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=1 RAMD32=1)
+  Clock Path Skew:        -0.076ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.783ns = ( 14.783 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.120ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=403, routed)         1.599     5.120    program_memory/clk_IBUF_BUFG
+    RAMB18_X1Y10         RAMB18E1                                     r  program_memory/ram_1k_generate.akv7.kcpsm6_rom/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X1Y10         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[4])
+                                                      2.454     7.574 r  program_memory/ram_1k_generate.akv7.kcpsm6_rom/DOADO[4]
+                         net (fo=14, routed)          1.302     8.875    processor/lower_reg_banks/ADDRA0
+    SLICE_X46Y27         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.150     9.025 f  processor/lower_reg_banks/RAMA/O
+                         net (fo=3, routed)           0.839     9.865    processor/data_path_loop[0].output_data.sy_kk_mux_lut/I0
+    SLICE_X46Y26         LUT5 (Prop_lut5_I0_O)        0.356    10.221 f  processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT5/O
+                         net (fo=29, routed)          1.032    11.253    processor/port_id[0]
+    SLICE_X42Y30         LUT3 (Prop_lut3_I2_O)        0.372    11.625 r  processor/digits[23]_i_2/O
+                         net (fo=4, routed)           0.541    12.166    processor/digits[23]_i_2_n_0
+    SLICE_X42Y31         LUT6 (Prop_lut6_I5_O)        0.328    12.494 r  processor/tx_busy_i_4/O
+                         net (fo=14, routed)          0.614    13.108    processor/tx_start3
+    SLICE_X44Y32         LUT4 (Prop_lut4_I3_O)        0.118    13.226 r  processor/tx_count[9]_i_1/O
+                         net (fo=14, routed)          0.511    13.737    uart/SR[0]
+    SLICE_X44Y34         FDRE                                         r  uart/tx_count_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=403, routed)         1.442    14.783    uart/clk_IBUF_BUFG
+    SLICE_X44Y34         FDRE                                         r  uart/tx_count_reg[0]/C
+                         clock pessimism              0.260    15.043    
+                         clock uncertainty           -0.035    15.008    
+    SLICE_X44Y34         FDRE (Setup_fdre_C_R)       -0.631    14.377    uart/tx_count_reg[0]
+  -------------------------------------------------------------------
+                         required time                         14.377    
+                         arrival time                         -13.737    
+  -------------------------------------------------------------------
+                         slack                                  0.640    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.115ns  (arrival time - required time)
+  Source:                 processor/carry_flag_flop/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            processor/stack_ram_low/RAMA/I
+                            (rising edge-triggered cell RAMD32 clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.276ns  (logic 0.141ns (50.995%)  route 0.135ns (49.005%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.949ns
+    Source Clock Delay      (SCD):    1.437ns
+    Clock Pessimism Removal (CPR):    0.498ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=403, routed)         0.554     1.437    processor/clk_IBUF_BUFG
+    SLICE_X45Y27         FDRE                                         r  processor/carry_flag_flop/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y27         FDRE (Prop_fdre_C_Q)         0.141     1.578 r  processor/carry_flag_flop/Q
+                         net (fo=6, routed)           0.135     1.714    processor/stack_ram_low/DIA0
+    SLICE_X46Y28         RAMD32                                       r  processor/stack_ram_low/RAMA/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=403, routed)         0.822     1.949    processor/stack_ram_low/WCLK
+    SLICE_X46Y28         RAMD32                                       r  processor/stack_ram_low/RAMA/CLK
+                         clock pessimism             -0.498     1.451    
+    SLICE_X46Y28         RAMD32 (Hold_ramd32_CLK_I)
+                                                      0.147     1.598    processor/stack_ram_low/RAMA
+  -------------------------------------------------------------------
+                         required time                         -1.598    
+                         arrival time                           1.714    
+  -------------------------------------------------------------------
+                         slack                                  0.115    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB18_X1Y10  program_memory/ram_1k_generate.akv7.kcpsm6_rom/CLKARDCLK
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750      SLICE_X42Y28  processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram/RAMA/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750      SLICE_X42Y28  processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram/RAMA/CLK
+
+
+
